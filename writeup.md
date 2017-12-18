@@ -71,7 +71,8 @@ Here, I have explored the different traffic signs that exist:
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-Initially, I tried to normalize the data at the beginning. But this required a high amount of RAM which I didn't have. After some consideration, I devised the solution of normalising on a batch basis. 
+Initially, I tried to normalize the data at the beginning. But this required a high amount of RAM which I didn't have. After some consideration, I devised the solution of normalising on a batch basis.
+I used a simple normalizing scheme of `x = x / 255` 
 
 I decided against grayscaling the data as I felt that the colors of the traffic signs play a big role in deciphering the class that they belong to.
 
@@ -168,16 +169,20 @@ The model was able to correctly guess 4 of the 6 traffic signs, which gives an a
 ![alt text][image6]
 The model is very sure about this sign (86%).
 
+
 Unfortunately, for both the stop signs the model is sure of turn left and stop doesn't even appear in the top 5 probablities. This might have something to do with backgrounds which the network has picked up on.
 ![alt text][image7]
 ![alt text][image8]
+
 
 Here, the network is realtively highly confident of the sign (56%)
 Interestingly, the 3 of the other next highest probablities are speed limits.
 ![alt text][image9]
 
+
 Similarly for this speed limit.
 ![alt text][image10]
+
 
 Here too, there is a strong probablity towards the correct sign(51%) with the next competition of 47% from the yield sign.
 ![alt text][image11]
