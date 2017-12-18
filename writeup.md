@@ -171,18 +171,22 @@ The model is very sure about this sign (86%).
 
 
 Unfortunately, for both the stop signs the model is sure of turn left and stop doesn't even appear in the top 5 probablities. This might have something to do with backgrounds which the network has picked up on.
+
 ![alt text][image7]
 ![alt text][image8]
 
 
 Here, the network is realtively highly confident of the sign (56%)
 Interestingly, the 3 of the other next highest probablities are speed limits.
+
 ![alt text][image9]
 
 
 Similarly for this speed limit.
+
 ![alt text][image10]
 
 
 Here too, there is a strong probablity towards the correct sign(51%) with the next competition of 47% from the yield sign.
+
 ![alt text][image11]
